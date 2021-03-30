@@ -6,14 +6,14 @@ import static org.junit.Assert.assertTrue;
 import domain.Nota;
 import domain.Student;
 import domain.Tema;
+import org.junit.After;
+import org.junit.Before;
 import repository.*;
 
 import org.junit.Test;
 import service.Service;
-import validation.NotaValidator;
-import validation.StudentValidator;
-import validation.TemaValidator;
-import validation.Validator;
+import validation.*;
+
 
 /**
  * Unit test for simple App.
