@@ -12,6 +12,12 @@ public class TemaXMLRepository extends AbstractXMLRepository<String, Tema> {
         loadFromXmlFile();
     }
 
+    public TemaXMLRepository(Validator<Tema> validator, String XMLfilename, Boolean load){
+        super(validator, XMLfilename);
+        if (load == true)
+            loadFromXmlFile();
+    }
+
     protected Element getElementFromEntity(Tema tema, Document XMLdocument) {
         Element element = XMLdocument.createElement("tema");
         element.setAttribute("ID", tema.getID());
