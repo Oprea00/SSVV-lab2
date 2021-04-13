@@ -28,7 +28,7 @@ private Service service;
         Validator<Student> validator = new StudentValidator();
         Validator<Tema> validator1 = new TemaValidator();
         Validator<Nota> validator2 = new NotaValidator();
-        StudentXMLRepository studentFileRepository = new StudentXMLRepository( validator,"studentiTest.xml");
+        StudentXMLRepository studentFileRepository = new StudentXMLRepository( validator,"studentiTest.xml", false);
         TemaXMLRepository temaFileRepository = new TemaXMLRepository(validator1, "teme.xml");
         NotaXMLRepository notaFileRepository = new NotaXMLRepository(validator2, "note.xml");
 

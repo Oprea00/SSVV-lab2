@@ -11,6 +11,12 @@ public class StudentXMLRepository extends AbstractXMLRepository<String, Student>
         loadFromXmlFile();
     }
 
+    public StudentXMLRepository(Validator<Student> validator, String XMLfilename, Boolean load) {
+        super(validator, XMLfilename);
+        if (load==true)
+        loadFromXmlFile();
+    }
+
     protected Element getElementFromEntity(Student student, Document XMLdocument) {
         Element element = XMLdocument.createElement("student");
         element.setAttribute("ID", student.getID());
