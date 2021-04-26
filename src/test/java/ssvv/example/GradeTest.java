@@ -45,6 +45,19 @@ public class GradeTest {
     public void addAssignment(){assertEquals(service.saveTema("1", "description", 9, 7), 0);}
 
     @Test
+    public void integrationAssignment(){
+        addStudent();
+        addAssignment();
+    }
+
+    @Test
+    public void integrationGrade(){
+        addStudent();
+        addAssignment();
+        assertEquals(service.saveNota("1", "1", 10, 8, "aaa"), 1);
+    }
+
+    @Test
     public void integrationTesting(){
         addGrade();
         addStudent();
